@@ -91,6 +91,7 @@ export const Header = () => {
 						{categories && categories.length > 0 && (
 							categories.map((category, i) => {
 								return (
+									i < 2 &&
 									<Link
 										key={`header-category-${i}`}
 										className={`${currentCategory === category

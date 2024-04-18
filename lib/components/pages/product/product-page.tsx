@@ -262,7 +262,7 @@ export const ProductPage = () => {
                             </button>
                         </div>
 
-                        <ProductFilters onFilterChange={handleFilterChange} filters={filters} />
+                        {/* <ProductFilters onFilterChange={handleFilterChange} filters={filters} /> */}
                     </div>
                     <div
                         className={`fixed inset-0 z-30 bg-gray-900/50 dark:bg-gray-900/80 ${isDrawerOpen
@@ -271,11 +271,11 @@ export const ProductPage = () => {
                         onClick={handleDrawerClick}
                     ></div>
 
-                    <div
+                    {/* <div
                         className="hidden rounded border border-gray-200 bg-white shadow dark:border-gray-600 dark:bg-gray-900 md:block"
                     >
                         <ProductFilters onFilterChange={handleFilterChange} filters={filters} />
-                    </div>
+                    </div> */}
 
                     <div className="col-span-3">
                         {totalProducts > 0 && (

@@ -15,6 +15,12 @@ import { Cookies } from '@/lib/components/shared/cookies'
 import { getProducts } from '@/lib/features/products/productsSlice'
 import { getUser, setUser } from '@/lib/features/auth/authSlice'
 import { IUser } from '@/lib/definitions'
+import { Metadata } from 'next/types'
+
+export const metadata: Metadata = {
+  title: "Best Online Shopping Store | Free Shipping | 100% Refund",
+  description: "Shop online for Electronics, Fashion, Home & Kitchen, Beauty & Grooming, Health, Toys, Baby, Books, Sports, etc. on desertcart. ✓Secure Shopping Platform ✓70M+ Products ✓FREE Delivery ✓FREE Returns",
+}
 
 export default async function RootLayout({
   children,
