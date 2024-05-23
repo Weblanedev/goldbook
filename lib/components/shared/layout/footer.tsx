@@ -10,8 +10,8 @@ export const Footer = ({ categories }: { categories: TCategories }) => {
 			<div className="container mx-auto">
 				<div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
 					<div>
-						<Link className="block text-white" href="/">
-							<Logo />
+						<Link className="block text-white uppercase font-extrabold" href="/">
+							GoldBook
 						</Link>
 
 						<p
@@ -71,7 +71,7 @@ export const Footer = ({ categories }: { categories: TCategories }) => {
 						</p>
 
 						<p className="mt-4 text-sm text-white dark:text-white sm:order-first sm:mt-0">
-							&copy; <span>{new Date().getFullYear()}</span> Fake Store
+							&copy; <span>{new Date().getFullYear()}</span> Goldbook
 						</p>
 					</div>
 				</div>

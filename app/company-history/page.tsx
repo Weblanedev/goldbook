@@ -15,8 +15,8 @@ export default function CompanyHistory() {
 				<section className="mb-8">
 					<h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-300">Inception</h2>
 					<p className="text-gray-500 dark:text-gray-400">
-						Welcome to the journey of Fake Store – a tale of passion, innovation, and unwavering
-						commitment. Founded in {new Date().getFullYear()}, our story began with a simple yet powerful
+						Welcome to the journey of Goldbook – a tale of passion, innovation, and unwavering
+						commitment. Our story began with a simple yet powerful
 						vision: to provide people with high-quality, affordable products that enhance their lives.
 					</p>
 				</section>
@@ -24,14 +24,14 @@ export default function CompanyHistory() {
 				<section className="mb-8">
 					<h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-300">Early Strides</h2>
 					<p className="text-gray-500 dark:text-gray-400">
-						In the early years, Fake Store navigated the dynamic landscape of online retail with
+						In the early years, Goldbook navigated the dynamic landscape of online retail with
 						determination and a thirst for excellence. Our dedicated team worked tirelessly to establish a
 						solid foundation, laying the groundwork for what would become a transformative force in the
 						e-commerce industry.
 					</p>
 				</section>
 
-				<section className="mb-8">
+				{/* <section className="mb-8">
 					<h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-gray-300">
 						Milestones and Achievements
 					</h2>
@@ -105,7 +105,7 @@ export default function CompanyHistory() {
 					<p className="text-gray-500 dark:text-gray-400">
 						Thank you for being a crucial part of our history.
 					</p>
-				</section>
+				</section> */}
 			</div>
 
 		</>

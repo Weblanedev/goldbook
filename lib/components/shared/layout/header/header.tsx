@@ -35,8 +35,8 @@ export const Header = () => {
 	return (<>
 		<nav className="relative bg-white shadow dark:bg-gray-800">
 			<div className="container mx-auto flex items-center justify-between px-6 py-4">
-				<Link href='/'>
-					<Logo />
+				<Link href='/' className='uppercase font-extrabold'>
+					GoldBook
 				</Link>
 				<div className="flex items-center justify-between md:order-2">
 					<div className="flex items-center justify-center">
