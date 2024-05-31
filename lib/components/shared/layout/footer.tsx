@@ -36,14 +36,14 @@ export const Footer = ({ categories }: { categories: TCategories }) => {
 									</Link>
 								</li>
 
-								<li>
-									<Link
+								{/* <li> */}
+									{/* <Link
 										className="capitalize text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
 										href="/contact-us"
 									>
 										Contact Us
-									</Link>
-								</li>
+									</Link> */}
+								{/* </li> */}
 							</ul>
 						</div>
 
@@ -67,12 +67,12 @@ export const Footer = ({ categories }: { categories: TCategories }) => {
 				<div className="mt-12 border-t border-white pt-6 dark:border-white">
 					<div className="text-center sm:flex sm:justify-between sm:text-left">
 						<p className="text-sm text-white dark:text-white">
-							<span className="block sm:inline">All rights reserved.</span>
+							<span className="block sm:inline">All rights reserved &copy; Goldbook</span>
 						</p>
 
-						<p className="mt-4 text-sm text-white dark:text-white sm:order-first sm:mt-0">
-							&copy; <span>{new Date().getFullYear()}</span> Goldbook
-						</p>
+						{/* <p className="mt-4 text-sm text-white dark:text-white sm:order-first sm:mt-0">
+							
+						</p> */}
 					</div>
 				</div>
 			</div>

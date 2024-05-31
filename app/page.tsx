@@ -5,10 +5,10 @@ import Image from "next/image";
 
 import { Banner } from '@/lib/components/product/banner'
 import { Features } from '@/lib/components/shared/features'
-import { Card as CategoriesCard } from '@/lib/components/categories/card'
-import { Slider as ProductSlider } from '@/lib/components/product/slider'
-import { Partners } from '@/lib/components/shared/partners'
-import { MobileApps } from '@/lib/components/shared/mobile-apps'
+// import { Card as CategoriesCard } from '@/lib/components/categories/card'
+// import { Slider as ProductSlider } from '@/lib/components/product/slider'
+// import { Partners } from '@/lib/components/shared/partners'
+// import { MobileApps } from '@/lib/components/shared/mobile-apps'
 
 export const metadata: Metadata = {
   title: "Best Online Shopping Store | Free Shipping | 100% Refund",
@@ -26,9 +26,9 @@ export default async function Home() {
 
       <Features />
 
-      <section className='py-10'>
+      {/* <section className='py-10'>
         <Partners />
-      </section>
+      </section> */}
 
       <section className="container mx-auto px-4 md:px-16 flex flex-col lg:flex-row items-center lg:gap-20 gap-14 py-20">
         <div className="flex flex-col gap-2 flex-1">
@@ -41,11 +41,11 @@ export default async function Home() {
           <p className="text-lg leading-loose">
             Contact us to schedule a consultation or visit our retail outlet to explore our selection of premium goods.
           </p>
-          <Link href="/contact">
+          {/* <Link href="/contact">
           <button className="mt-5 w-fit md:text-base text-sm hover:border-2 border-2 border-transparent font-semibold py-3 px-8 md:px-10 text-white bg-rose-700 hover:border-rose-700 hover:bg-yellow-600 hover:shadow-yellow-600 hover:shadow-2xl rounded-xl">
             Contact Us
           </button>
-          </Link>
+          </Link> */}
         </div>
 
         <div className="flex-1 relative w-full">

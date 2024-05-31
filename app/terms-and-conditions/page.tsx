@@ -17,7 +17,7 @@ export default function TermsAndConditions() {
 				<div className="text-cyan-800 dark:text-gray-300">
 					<p>Last Revised: January 1, <span>{new Date().getFullYear()}</span></p>
 					<p>
-						Welcome to www.lorem-ipsum.info. This site is provided as a service to our visitors and may be
+						Welcome to Goldbook. This site is provided as a service to our visitors and may be
 						used for informational purposes only. Because the Terms and Conditions contain legal
 						obligations, please read them carefully.
 					</p>
@@ -130,24 +130,24 @@ export default function TermsAndConditions() {
 					<h3 className="my-2 text-xl font-semibold text-cyan-900 dark:text-white">
 						9. COPYRIGHT AND TRADEMARK NOTICE
 					</h3>
-					<p>
+					{/* <p>
 						Except our generated dummy copy, which is free to use for private and commercial use, all
 						other text is copyrighted. generator.lorem-ipsum.info &#xA9; 2013, all rights reserved
-					</p>
-					<h3 className="my-2 text-xl font-semibold text-cyan-900 dark:text-white">
+					</p> */}
+					{/* <h3 className="my-2 text-xl font-semibold text-cyan-900 dark:text-white">
 						10. INTELLECTUAL PROPERTY INFRINGEMENT CLAIMS
-					</h3>
-					<p>
+					</h3> */}
+					{/* <p>
 						It is our policy to respond expeditiously to claims of intellectual property infringement. We
 						will promptly process and investigate notices of alleged infringement and will take
 						appropriate actions under the Digital Millennium Copyright Act ("DMCA") and other applicable
 						intellectual property laws. Notices of claimed infringement should be directed to:
-					</p>
-					<p>generator.lorem-ipsum.info</p>
+					</p> */}
+					{/* <p>generator.lorem-ipsum.info</p>
 					<p>126 Electricov St.</p>
 					<p>Kiev, Kiev 04176</p>
-					<p>Ukraine</p>
-					<p>contact@lorem-ipsum.info</p>
+					<p>Ukraine</p> */}
+					{/* <p>contact@lorem-ipsum.info</p> */}
 					<h3 className="my-2 text-xl font-semibold text-cyan-900 dark:text-white">
 						11. PLACE OF PERFORMANCE
 					</h3>
