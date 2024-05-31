@@ -98,20 +98,20 @@ const Billing = () => {
     <div className="w-full h-full flex flex-col pt-[66px] md:pt-[0px]">
       <section className="relative h-[250px] md:h-[300px]">
         <div className="flex flex-col gap-2 items-center justify-center h-full w-full">
-          <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left leading-snug md:leading-[62px] text-center text-blue-950">
+          <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left leading-snug md:leading-[62px] text-center text-rose-950">
             Order Details
           </h1>
-          <p>Find the best way to get help and connect with Splashtop</p>
+          <p>Find the best way to get help and connect with Goldbook</p>
         </div>
       </section>
 
       <section className="relative p-10 md:px-[130px] md:pb-[130px] flex flex-col lg:flex-row gap-8 items-center lg:items-start w-full justify-center">
         <div className="flex flex-col gap-8 items-start w-full justify-center lg:pr-8 lg:border-r">
-          <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center lg:w-[720px]">
+          <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center lg:w-[500px]">
             <h2 className="text-[32px] font-medium">Billing details</h2>
           </div>
 
-          <div className="w-full lg:w-[720px]">
+          <div className="w-full lg:w-[500px]">
             <form className="mx-auto w-full flex flex-col gap-5">
               <div className="flex flex-col w-full gap-5 md:flex-row">
                 <input
@@ -143,7 +143,7 @@ const Billing = () => {
               />
             </form>
 
-            <div className="flex flex-col gap-5 mt-10 text-[#181616] items-start justify-center lg:w-[720px]">
+            <div className="flex flex-col gap-5 mt-10 text-[#181616] items-start justify-center lg:w-[500px]">
               <h2 className="text-[32px] font-medium">Additional Details</h2>
 
               <textarea
@@ -157,7 +157,7 @@ const Billing = () => {
         </div>
 
         <div className="flex flex-col gap-[15px] items-start w-full justify-center">
-          <h4 className="font-bold text-blue-500 leading-[28px]">
+          <h4 className="font-bold text-rose-500 leading-[28px]">
             YOUR ORDER
           </h4>
 
@@ -363,7 +363,7 @@ const Billing = () => {
               type="submit"
               disabled={isButtonDisabled}
               onClick={handleSubmit}
-              className={`group gap-[8px] mt-[30px] w-[100%] text-center text-[16px] sm:text-[24px] rounded-lg font-body bg-white text-blue-500 ${!isButtonDisabled && 'hover:bg-blue-500 hover:text-white'} px-[30px] sm:px-[97px] py-[15px] sm:py-[21px] border border-blue-500 transition-one`}>
+              className={`group gap-[8px] mt-[30px] w-[100%] text-center text-[16px] sm:text-[24px] rounded-lg font-body bg-white text-rose-500 ${!isButtonDisabled && 'hover:bg-rose-500 hover:text-white'} px-[30px] sm:px-[97px] py-[15px] sm:py-[21px] border border-rose-500 transition-one`}>
               Place Order
             </button>
           </form>

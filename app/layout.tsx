@@ -47,7 +47,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <head><link rel="icon" href="/favicon.png" /></head>
+      <head><link rel="icon" href="https://th.bing.com/th/id/R.76c9e1ddc22ebd68899efdf5e0f110c0?rik=018ILKcUCM%2bBKQ&riu=http%3a%2f%2fwww.pngall.com%2fwp-content%2fuploads%2f2%2fG-Letter-PNG-Image-File.png&ehk=xMyZ6uZtW0TLhnMlEu7XAIEX%2fWdgKHrmraKT4dZERLs%3d&risl=&pid=ImgRaw&r=0" /></head>
       <body className={inter.className}>
         <StoreProvider preloadedState={{
           categories: {

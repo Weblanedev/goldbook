@@ -36,31 +36,17 @@ export const Footer = ({ categories }: { categories: TCategories }) => {
 									</Link>
 								</li>
 
-								{/* <li> */}
-									{/* <Link
+								<li>
+									<Link
 										className="capitalize text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
 										href="/contact-us"
 									>
 										Contact Us
-									</Link> */}
-								{/* </li> */}
-							</ul>
-						</div>
-
-						<div className="text-center sm:text-left">
-							<p className="text-lg font-medium text-white dark:text-white">Helpful Links</p>
-
-							<ul className="mt-8 space-y-4 text-sm">
-								<li>
-									<Link
-										className="capitalize text-white transition hover:text-white/75 dark:text-white dark:hover:text-white/75"
-										href="/faq"
-									>
-										FAQs
 									</Link>
 								</li>
 							</ul>
 						</div>
+
 					</div>
 				</div>
 

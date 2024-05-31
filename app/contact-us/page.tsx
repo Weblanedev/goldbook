@@ -78,7 +78,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <section className="relative p-10 md:px-[130px] md:pt-[50px] md:mb-[100px] flex flex-col md:flex-row gap-10 items-start w-full justify-between">
+      <section className="relative p-10 md:px-[80px] md:pt-[0px] md:mb-[100px] flex flex-col md:flex-row gap-10 items-start w-full justify-between">
         <div className="w-full flex gap-8 flex-col items-center justify-center lg:border-r pr-10">
           <div className="flex flex-col gap-2.5 text-[#181616] items-center justify-center md:w-[720px]">
             <h4 className="text-base font-medium">GET IN TOUCH</h4>
@@ -153,41 +153,24 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-10 items-start justify-center max-w-[300p x] md:w-full">
+        <div className="flex flex-col gap-10 items-start justify-center max-w-[300px] md:w-full">
           <div className="flex flex-col gap-2.5 text-[#181616] items-center justify-center my-[34px]">
-            <h2 className="text-[35px] font-medium">Other ways to reach us:</h2>
-          </div>
-          <div className="flex gap-5 items-start justify-center">
-            <img src={"/images/phone.png"} alt="" className="w-6 pt-1" />
-            <div className="flex flex-col items-start justify-center gap-3">
-              <h4 className="text-[24px] leading-[24px] font-medium">
-                Call Us
-              </h4>
-              <p className="text-rose-500 leading-[16px]">
-                +234 908-398-9079
-              </p>
-            </div>
+            <h2 className="text-[30px] font-medium">Contact Details</h2>
           </div>
           <div className="flex gap-5 items-start justify-center">
             <img src={"/images/mail.png"} alt="" className="w-6 pt-1" />
             <div className="flex flex-col items-start justify-center gap-3">
-              <h4 className="text-[24px] leading-[24px] font-medium">
-                Mail Us
+              <h4 className="text-[20px] leading-[24px] font-medium text-rose-500">
+                info@goldbook.ng
               </h4>
-              <p className="text-rose-500 leading-[16px]">
-              support@bronzetent.com
-              </p>
             </div>
           </div>
           <div className="flex gap-5 items-start justify-center">
             <img src={"/images/location.png"} alt="" className="w-6 pt-1" />
             <div className="flex flex-col items-start justify-center gap-3">
-              <h4 className="text-[24px] leading-[24px] font-medium">
-                Address
+              <h4 className="text-[20px] leading-[24px] font-medium text-rose-500">
+                MON - FRI : 9am - 5pm
               </h4>
-              <p className="text-rose-500 leading-normal">
-                Lagos, Nigeira
-              </p>
             </div>
           </div>
         </div>
