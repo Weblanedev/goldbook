@@ -153,16 +153,31 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="flex flex-col gap-10 items-start justify-center max-w-[300px] md:w-full">
+        <div className="flex flex-col gap-10 items-start justify-center w-[100%]">
           <div className="flex flex-col gap-2.5 text-[#181616] items-center justify-center my-[34px]">
             <h2 className="text-[30px] font-medium">Contact Details</h2>
+          </div>
+          <div className="flex gap-5 items-center justify-center">
+            <div className='pt-[0px] w-[35px] h-[35px] relative'>
+              <img src='/images/phone.png' className='rounded-[12px]' alt=""></img>
+            </div>
+            <a className="text-[20px] leading-[24px] font-medium text-rose-500" href="tel:+2349139348118">
+              +234 913-934-8118
+            </a>
+          </div>
+          <div className="flex gap-5 items-start justify-center">
+            <div className='pt-[24px] w-[35px] h-[35px] relative'>
+              <img src='/images/location.png' className='rounded-[12px]' alt=""></img>
+            </div>
+            <h4 className="text-[20px] leading-[24px] font-medium text-rose-500">
+            2 Dynamic Estate Off Orchid Road Lekki Phase 2.</h4>
           </div>
           <div className="flex gap-5 items-start justify-center">
             <img src={"/images/mail.png"} alt="" className="w-6 pt-1" />
             <div className="flex flex-col items-start justify-center gap-3">
-              <h4 className="text-[20px] leading-[24px] font-medium text-rose-500">
+              <a className="text-[20px] leading-[24px] font-medium text-rose-500" href="mailto:info@goldbook.ng">
                 info@goldbook.ng
-              </h4>
+              </a>
             </div>
           </div>
           <div className="flex gap-5 items-start justify-center">

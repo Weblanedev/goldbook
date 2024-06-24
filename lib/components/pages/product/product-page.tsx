@@ -57,7 +57,7 @@ export const ProductPage = () => {
     const [totalProducts, setTotalProducts] = useState(0)
     const [filters, setFilters] = useState({} as IFilters)
 
-    
+
 
     let defaultFilters = {
         categories: categories.map((category) => ({
@@ -280,7 +280,7 @@ export const ProductPage = () => {
                     <div className="col-span-3">
                         {totalProducts > 0 && (
                             <div className="mb-4 flex items-center">
-                                <p className="dark:text-gray-300">{totalProducts} Product Showing</p>
+                                <p className="dark:text-gray-300">{totalProducts + 15} Products Showing</p>
                                 <div className="ml-auto flex gap-2">
                                     <div
                                         className={`${grid
@@ -341,7 +341,258 @@ export const ProductPage = () => {
                         )}
 
                         <div className={`grid grid-cols-1 gap-6 ${grid ? 'sm:grid-cols-2 xl:grid-cols-3' : ''}`}>
-                            {filteredProducts.map((product, i) => (
+                            {
+                                filteredProducts.map((product, i) => {
+                                    return (
+                                        <ProductCard product={product} grid={grid} key={`product-${i}`} />
+                                    )
+                                })
+                            }
+                        </div>
+
+                        <div className={`grid grid-cols-1 gap-6 ${grid ? 'sm:grid-cols-2 xl:grid-cols-3' : ''}`}>
+                            {[
+                                {
+                                    "id": 1,
+                                    "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 2 Laptops",
+                                    "price": 109.95,
+                                    "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+                                    "category": "electronics",
+                                    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+                                    "rating": {
+                                        "rate": 3.9,
+                                        "count": 120
+                                    },
+                                    "color": "yellow",
+                                    "size": "xs",
+                                    "quantity": 1,
+                                    "brand": "apple"
+                                },
+                                {
+                                    "id": 2,
+                                    "title": "Samsung Galaxy S21 Ultra",
+                                    "price": 999.99,
+                                    "description": "Samsung Galaxy S21 Ultra with 108MP camera, 100x space zoom, and 6.8-inch display.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/610KvwSCMYL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+                                    "rating": {
+                                        "rate": 4.7,
+                                        "count": 3400
+                                    },
+                                    "color": "black",
+                                    "size": "large",
+                                    "quantity": 1,
+                                    "brand": "samsung"
+                                },
+                                {
+                                    "id": 3,
+                                    "title": "Sony WH-1000XM4 Wireless Noise-Canceling Headphones",
+                                    "price": 349.99,
+                                    "description": "Industry-leading noise canceling with Dual Noise Sensor technology. Next-level music with Edge-AI, co-developed with Sony Music Studios Tokyo.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/51DkbWZIg+L._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.8,
+                                        "count": 5000
+                                    },
+                                    "color": "black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "sony"
+                                },
+                                {
+                                    "id": 4,
+                                    "title": "Apple MacBook Pro 13-inch",
+                                    "price": 1299.99,
+                                    "description": "Apple MacBook Pro 13-inch with M1 chip, 8GB RAM, and 256GB SSD.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61L5QgPvgqL.__AC_SY445_SX342_QL70_FMwebp_.jpg",
+                                    "rating": {
+                                        "rate": 4.9,
+                                        "count": 2300
+                                    },
+                                    "color": "silver",
+                                    "size": "13-inch",
+                                    "quantity": 1,
+                                    "brand": "apple"
+                                },
+                                {
+                                    "id": 5,
+                                    "title": "Canon EOS R5",
+                                    "price": 3899.99,
+                                    "description": "Canon EOS R5 full-frame mirrorless camera with 8K video recording and 45MP resolution.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/71hpUUcC5uL._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.6,
+                                        "count": 1200
+                                    },
+                                    "color": "black",
+                                    "size": "full-frame",
+                                    "quantity": 1,
+                                    "brand": "canon"
+                                },
+                                {
+                                    "id": 6,
+                                    "title": "Nintendo Switch",
+                                    "price": 299.99,
+                                    "description": "Nintendo Switch with neon blue and red Joy-Con. Handheld gaming console with 6.2-inch screen.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61-PblYntsL._SL1500_.jpg",
+                                    "rating": {
+                                        "rate": 4.8,
+                                        "count": 8000
+                                    },
+                                    "color": "multicolor",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "nintendo"
+                                },
+                                {
+                                    "id": 7,
+                                    "title": "Samsung 49-Inch Odyssey G9 Gaming Monitor",
+                                    "price": 1399.99,
+                                    "description": "Samsung 49-Inch Odyssey G9 Gaming Monitor with 240Hz refresh rate, 1000R curved screen, and QLED panel.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/81r8JazRcoL._AC_SL1500_.jpg",
+                                    "rating": {
+                                        "rate": 3.6,
+                                        "count": 1200
+                                    },
+                                    "color": "black",
+                                    "size": "49-inch",
+                                    "quantity": 1,
+                                    "brand": "samsung"
+                                },
+                                {
+                                    "id": 8,
+                                    "title": "Nintendo Switch OLED Model",
+                                    "price": 349.99,
+                                    "description": "Nintendo Switch OLED Model with 7-inch OLED screen, enhanced audio, and 64GB internal storage.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/41bicWJ2fbL._SY300_SX300_QL70_FMwebp_.jpg",
+                                    "rating": {
+                                        "rate": 3.8,
+                                        "count": 1500
+                                    },
+                                    "color": "white",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "nintendo"
+                                },
+                                {
+                                    "id": 9,
+                                    "title": "Apple iPad Pro 12.9-inch",
+                                    "price": 1099.00,
+                                    "description": "Apple iPad Pro 12.9-inch with M1 chip, 128GB storage, and Liquid Retina XDR display.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/81FH2j7EnJL._AC_SL1500_.jpg",
+                                    "rating": {
+                                        "rate": 4,
+                                        "count": 2500
+                                    },
+                                    "color": "space gray",
+                                    "size": "12.9-inch",
+                                    "quantity": 1,
+                                    "brand": "apple"
+                                },
+                                {
+                                    "id": 10,
+                                    "title": "Sony PlayStation 5 Console",
+                                    "price": 499.99,
+                                    "description": "Sony PlayStation 5 Console with Ultra HD Blu-ray disc drive, 825GB SSD, and DualSense wireless controller.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/51fM0CKG+HL._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.9,
+                                        "count": 6800
+                                    },
+                                    "color": "white",
+                                    "size": "825GB",
+                                    "quantity": 1,
+                                    "brand": "sony"
+                                },
+                                {
+                                    "id": 11,
+                                    "title": "Anker PowerCore 26800 Portable Charger",
+                                    "price": 59.99,
+                                    "description": "Anker PowerCore 26800 Portable Charger with 26800mAh capacity, PowerIQ and VoltageBoost technology.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61vj2BPDpuL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+                                    "rating": {
+                                        "rate": 4,
+                                        "count": 18000
+                                    },
+                                    "color": "black",
+                                    "size": "26800mAh",
+                                    "quantity": 1,
+                                    "brand": "anker"
+                                },
+                                {
+                                    "id": 12,
+                                    "title": "Logitech G Pro X Superlight Wireless Gaming Mouse",
+                                    "price": 149.99,
+                                    "description": "Logitech G Pro X Superlight Wireless Gaming Mouse with HERO 25K sensor, 25,600 DPI, and ultra-lightweight design.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/51uy8gOG-iL._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.8,
+                                        "count": 4200
+                                    },
+                                    "color": "black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "logitech"
+                                },
+                                {
+                                    "id": 13,
+                                    "title": "Samsung QN90A Neo QLED 4K Smart TV",
+                                    "price": 1997.99,
+                                    "description": "Samsung QN90A Neo QLED 4K Smart TV with Quantum Matrix Technology, Neo Quantum Processor 4K, and Object Tracking Sound.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/71VDnA2bx6L._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 3.8,
+                                        "count": 1500
+                                    },
+                                    "color": "black",
+                                    "size": "65-inch",
+                                    "quantity": 1,
+                                    "brand": "samsung"
+                                },
+                                {
+                                    "id": 14,
+                                    "title": "GoPro HERO9 Black",
+                                    "price": 379.99,
+                                    "description": "GoPro HERO9 Black with 5K video recording, 20MP photos, and HyperSmooth 3.0 stabilization.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/81Szbr4wo5L._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.2,
+                                        "count": 5600
+                                    },
+                                    "color": "black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "gopro"
+                                },
+                                {
+                                    "id": 15,
+                                    "title": "Bose SoundLink Revolve+ Portable Bluetooth Speaker",
+                                    "price": 299.00,
+                                    "description": "Bose SoundLink Revolve+ Portable Bluetooth Speaker with 360-degree sound, water-resistant design, and up to 16 hours of battery life.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61+DpMdBNJL._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                }
+                            ].map((product, i) => (
                                 <ProductCard product={product} grid={grid} key={`product-${i}`} />
                             ))}
                         </div>
