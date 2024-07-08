@@ -12,11 +12,11 @@ import formatAmount from "@/app/utils";
 export const Card = ({ product, grid = true }: { product: IProduct, grid?: boolean }) => {
     const dispatch = useDispatch();
 
-    const productPrice = Number(product.price);
+    const productPrice = Number(product?.price);
     const multiplier = 1450;
     const totalAmount = productPrice * multiplier;
     const formattedTotalAmount = !isNaN(totalAmount) ? formatAmount(totalAmount) : 'Invalid amount';
-
+    
     const getDesc = () => {
         if (!grid) return product.description;
 
@@ -32,14 +32,14 @@ export const Card = ({ product, grid = true }: { product: IProduct, grid?: boole
         dispatch(setAlert({ title: 'Success', message: 'Product added to cart', type: 'success' }));
     };
     const router = useRouter()
-    const purchase = (title: any, formattedTotalAmount: any) => {
-      const product = {
-        name: title,
-        formattedTotalAmount,
-      }
-      localStorage.setItem("item", JSON.stringify(product))
-      router.push("/billing") 
-    }
+    const purchase = (title: any) => {
+        const product = {
+            name: title,
+            formattedTotalAmount,
+        };
+        localStorage.setItem("item", JSON.stringify(product));
+        router.push("/billing");
+    };
 
     return (
         <div
@@ -80,7 +80,7 @@ export const Card = ({ product, grid = true }: { product: IProduct, grid?: boole
                     ₦{formattedTotalAmount}
                         </h1>
                     <button
-                        onClick={() => purchase(product.title, product.price.toLocaleString())}
+                        onClick={() => purchase(product.title)}
                         className="rounded bg-gray-800 p-3 text-xs font-bold uppercase text-white"
                     >
                         Purchase
