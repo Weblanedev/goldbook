@@ -10,7 +10,7 @@ import ShowOrderModal from "../component/show-order";
 const Billing = () => {
   const [selectedItem, setSelectedItem] = useState({
     name: "",
-    price: "",
+    formattedTotalAmount: "",
     image: ""
   });
   useEffect(() => {
@@ -30,7 +30,7 @@ const Billing = () => {
 
     // Formatting the result back to the original format
     const formattedResult = result.toFixed(2);
-    const output = `$${formattedResult}`;
+    const output = `${formattedResult}`;
 
     return output;
   }
@@ -175,7 +175,7 @@ const Billing = () => {
                 {selectedItem?.name}
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-                ${selectedItem?.price}
+              ₦{selectedItem?.formattedTotalAmount}
               </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
@@ -183,13 +183,13 @@ const Billing = () => {
                 Processing Fee
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-                $5.00
+              ₦5,000.00
               </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
               <h4 className="text-[#a20401] font-medium text-[16px]">
-                {add100Dollars(selectedItem?.price)}
+              ₦{add100Dollars(selectedItem?.formattedTotalAmount)}
               </h4>
             </div>
           </div>

@@ -6,10 +6,16 @@ import { addToCart } from "@/lib/features/cart/cartSlice";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useDispatch } from "react-redux";
+import formatAmount from "@/app/utils";
 
 
 export const Card = ({ product, grid = true }: { product: IProduct, grid?: boolean }) => {
     const dispatch = useDispatch();
+
+    const productPrice = Number(product.price);
+    const multiplier = 1450;
+    const totalAmount = productPrice * multiplier;
+    const formattedTotalAmount = !isNaN(totalAmount) ? formatAmount(totalAmount) : 'Invalid amount';
 
     const getDesc = () => {
         if (!grid) return product.description;
@@ -26,10 +32,10 @@ export const Card = ({ product, grid = true }: { product: IProduct, grid?: boole
         dispatch(setAlert({ title: 'Success', message: 'Product added to cart', type: 'success' }));
     };
     const router = useRouter()
-    const purchase = (title: any, price: any) => {
+    const purchase = (title: any, formattedTotalAmount: any) => {
       const product = {
         name: title,
-        price,
+        formattedTotalAmount,
       }
       localStorage.setItem("item", JSON.stringify(product))
       router.push("/billing") 
@@ -70,7 +76,9 @@ export const Card = ({ product, grid = true }: { product: IProduct, grid?: boole
                     ))}
                 </div>
                 <div className="item-center mt-2 flex flex-wrap justify-between">
-                    <h1 className="text-xl font-bold text-gray-700 dark:text-gray-300">${product.price}</h1>
+                    <h1 className="text-xl font-bold text-gray-700 dark:text-gray-300">
+                    ₦{formattedTotalAmount}
+                        </h1>
                     <button
                         onClick={() => purchase(product.title, product.price.toLocaleString())}
                         className="rounded bg-gray-800 p-3 text-xs font-bold uppercase text-white"
