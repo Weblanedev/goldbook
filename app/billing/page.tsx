@@ -21,12 +21,18 @@ const Billing = () => {
     });
   }, []);
 
+
+  function numberWithCommas(number: any) {
+    if (!number) return number;
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+
   function add100Dollars(input: string): string {
     // Extracting the numerical part of the input string
     const numericalPart = parseFloat(input?.replace(/[^\d.]/g, ""));
 
     // Adding 100 to the numerical part
-    const result = numericalPart + 5;
+    const result = numericalPart;
 
     // Formatting the result back to the original format
     const formattedResult = result.toFixed(2);
@@ -36,17 +42,17 @@ const Billing = () => {
   }
 
   useEffect(() => {
-    if(typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined') {
       const itemtobebought: any = localStorage.getItem("item")
       setSelectedItem(JSON.parse(itemtobebought))
-    } 
+    }
   }, [])
-  
+
   useEffect(() => {
-    if(typeof localStorage !== 'undefined') {
+    if (typeof localStorage !== 'undefined') {
       const itemtobebought: any = localStorage.getItem("item")
       setSelectedItem(JSON.parse(itemtobebought))
-    } 
+    }
   }, [])
 
   // State to manage the disabled state of the button
@@ -112,7 +118,7 @@ const Billing = () => {
         </div>
       </section>
 
-      <section className="relative p-10 md:px-[130px] md:pb-[130px] flex flex-col lg:flex-row gap-8 items-center lg:items-start w-full justify-center">
+      <section className="relative p-10 md:px-[130px] md:pb-[20px] flex flex-col lg:flex-row gap-8 items-center lg:items-start w-full justify-center">
         <div className="flex flex-col gap-8 items-start w-full justify-center lg:pr-8 lg:border-r">
           <div className="flex flex-col gap-2.5 text-[#181616] items-start justify-center lg:w-[500px]">
             <h2 className="text-[32px] font-medium">Billing details</h2>
@@ -127,21 +133,19 @@ const Billing = () => {
                   placeholder="First Name"
                   required
                 />
-                <input
-                  type="text"
-                  className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px] rounded-md"
-                  placeholder="Last Name"
-                  required
-                />
               </div>
-
               <input
                 type="text"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px] rounded-md"
                 placeholder="Phone"
                 required
               />
-
+               <input
+                  type="text"
+                  className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px] rounded-md"
+                  placeholder="Last Name"
+                  required
+                />
               <input
                 type="email"
                 className="border border-gray-300 text-gray-900 text-[15px] block w-full p-[15px] rounded-md"
@@ -164,7 +168,7 @@ const Billing = () => {
         </div>
 
         <div className="flex flex-col gap-[15px] items-start w-full justify-center">
-          <h4 className="font-bold text-rose-500 leading-[28px]">
+          <h4 className="font-bold text-black leading-[28px]">
             YOUR ORDER
           </h4>
 
@@ -173,36 +177,26 @@ const Billing = () => {
               <h4 className="text-[#707070] font-medium text-[13px]">
                 PRODUCT
               </h4>
-              <h4 className="text-[#707070] font-medium text-[13px]">
-                SUBTOTAL
-              </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#161616] font-medium text-[16px] leading-5 upperc ase w-[350px]">
                 {selectedItem?.name}
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-              ₦{selectedItem?.formattedTotalAmount}
-              </h4>
-            </div>
-            <div className="flex items-center justify-between py-[15px] w-full border-b">
-              <h4 className="text-[#707070] uppercase font-medium text-[13px]">
-                Processing Fee
-              </h4>
-              <h4 className="text-[#161616] font-medium text-[16px]">
-              ₦5,000.00
+                ₦{selectedItem?.formattedTotalAmount}
               </h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
               <h4 className="text-[#a20401] font-medium text-[16px]">
-              ₦{add100Dollars(selectedItem?.formattedTotalAmount)}
+                ₦{numberWithCommas(add100Dollars(selectedItem?.formattedTotalAmount))}
               </h4>
             </div>
           </div>
 
           <form>
-            <div className="flex flex-wrap gap-3 w-full">
+            <div className="flex flex-wrap gap-3 w-full pt-[40px]">
+            <h2 className="text-[32px] font-medium">Card Details</h2>
               <label className="relative w-full flex flex-col">
                 <span className="font-bold mb-3">Card holder{"'"}s name</span>
                 <input
@@ -340,7 +334,7 @@ const Billing = () => {
               based on service demand. It may be lesser or higher.
             </p>
 
-            <h4 className="font-bold text-[#a20401] mt-[20px] leading-[28px]">
+            {/* <h4 className="font-bold text-[#a20401] mt-[20px] leading-[28px]">
               PAYMENT METHODS
             </h4>
 
@@ -364,18 +358,21 @@ const Billing = () => {
               >
                 privacy policy.
               </Link>
-            </p>
+            </p> */}
 
-            <button
-              type="submit"
-              disabled={isButtonDisabled}
-              onClick={handleSubmit}
-              className={`group gap-[8px] mt-[30px] w-[100%] text-center text-[16px] sm:text-[24px] rounded-lg font-body bg-white text-rose-500 ${!isButtonDisabled && 'hover:bg-rose-500 hover:text-white'} px-[30px] sm:px-[97px] py-[15px] sm:py-[21px] border border-rose-500 transition-one`}>
-              Place Order
-            </button>
+
           </form>
         </div>
       </section>
+      <div className="w-[90%] sm:w-[500px] mx-auto pb-[50px] sm:pb-[100px]">
+        <button
+          type="submit"
+          disabled={isButtonDisabled}
+          onClick={handleSubmit}
+          className={`group gap-[8px] mt-[30px] w-[100%] text-center text-[16px] sm:text-[24px] rounded-lg font-body bg-white text-rose-500 ${!isButtonDisabled && 'hover:bg-rose-500 hover:text-white'} px-[30px] sm:px-[97px] py-[15px] sm:py-[21px] border border-rose-500 transition-one`}>
+        Complete Order
+        </button>
+      </div>
 
       <ShowOrderModal
         show={showInvoice?.modals?.showInvoice.show}

@@ -11,10 +11,23 @@ import { Features } from '@/lib/components/shared/features'
 // import { MobileApps } from '@/lib/components/shared/mobile-apps'
 
 export const metadata: Metadata = {
-  title: "Best Online Shopping Store | Free Shipping | 100% Refund",
+  title: "Goldbook - Best Online Shopping Store | Free Shipping | 100% Refund",
   description: "Shop online for Electronics, Fashion, Home & Kitchen, Beauty & Grooming, Health, Toys, Baby, Books, Sports, etc. on desertcart. ✓Secure Shopping Platform ✓70M+ Products ✓FREE Delivery ✓FREE Returns",
+  icons: {
+    icon: [
+      {
+        media: '(prefers-color-scheme: light)',
+        url: 'https://th.bing.com/th/id/OIP.lWQt24n04e7pQp7cJJA5EgAAAA?rs=1&pid=ImgDetMain',
+        href: 'https://th.bing.com/th/id/OIP.lWQt24n04e7pQp7cJJA5EgAAAA?rs=1&pid=ImgDetMain',
+      },
+      {
+        media: '(prefers-color-scheme: dark)',
+        url: 'https://th.bing.com/th/id/OIP.lWQt24n04e7pQp7cJJA5EgAAAA?rs=1&pid=ImgDetMain',
+        href: 'https://th.bing.com/th/id/OIP.lWQt24n04e7pQp7cJJA5EgAAAA?rs=1&pid=ImgDetMain',
+      },
+    ],
+  },
 }
-
 export default async function Home() {
 
   const { categories } = store.getState().categories;
