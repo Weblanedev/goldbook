@@ -51,7 +51,6 @@ const Billing = () => {
     if (!number) return number;
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
-
   const formattedAmount = add100Dollars(selectedItem?.formattedTotalAmount);
 
   function payKorapay() {
