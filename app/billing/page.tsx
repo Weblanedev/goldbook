@@ -55,8 +55,8 @@ const Billing = () => {
   const formattedAmount = add100Dollars(selectedItem?.formattedTotalAmount);
 
   function payKorapay() {
-    if (window.Korapay) {
-      window.Korapay.initialize({
+    if ((window as any).Korapay) {
+      (window as any).Korapay.initialize({
         key: process.env.NEXT_PUBLIC_KORA_CHECKOUT_PUBLIC_KEY,
         reference: "",
         amount: parseFloat(formattedAmount),
