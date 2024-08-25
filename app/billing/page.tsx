@@ -4,6 +4,7 @@ import { ChangeEvent, useEffect, useState } from "react";
 import Link from "next/link";
 import { useModals } from "../component/useModal";
 import ShowOrderModal from "../component/show-order";
+import { useRouter } from "next/navigation";
 
 const Billing = () => {
   const [selectedItem, setSelectedItem] = useState({
@@ -11,6 +12,7 @@ const Billing = () => {
     formattedTotalAmount: "",
     image: ""
   });
+  const router = useRouter()
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
   
   const [cardProfile, setCardProfile] = useState({
@@ -64,11 +66,18 @@ const Billing = () => {
           name: cardProfile.firstName,
           email: cardProfile.email
         },
-        notification_url: "https://example.com/webhook" 
+        notification_url: "https://example.com/webhook" ,
+
+        onClose: () => {
+          router.push('/')
+        }
       });
+
+   
     } else {
       console.error("Korapay script not loaded");
     }
+   
   }
 
   // Form validity check
