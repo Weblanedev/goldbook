@@ -280,7 +280,7 @@ export const ProductPage = () => {
                     <div className="col-span-3">
                         {totalProducts > 0 && (
                             <div className="mb-4 flex items-center">
-                                <p className="dark:text-gray-300">{totalProducts + 15} Products Showing</p>
+                                <p className="dark:text-gray-300">{totalProducts + 26} Products Showing</p>
                                 <div className="ml-auto flex gap-2">
                                     <div
                                         className={`${grid
@@ -350,7 +350,7 @@ export const ProductPage = () => {
                             }
                         </div>
 
-                        <div className={`grid grid-cols-1 gap-6 ${grid ? 'sm:grid-cols-2 xl:grid-cols-3' : ''}`}>
+                        <div className={`mt-5 grid grid-cols-1 gap-6 ${grid ? 'sm:grid-cols-2 xl:grid-cols-3' : ''}`}>
                             {[
                                 {
                                     "id": 1,
@@ -583,6 +583,185 @@ export const ProductPage = () => {
                                     "description": "Bose SoundLink Revolve+ Portable Bluetooth Speaker with 360-degree sound, water-resistant design, and up to 16 hours of battery life.",
                                     "category": "electronics",
                                     "image": "https://m.media-amazon.com/images/I/61+DpMdBNJL._AC_UY218_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 16,
+                                    "title": "Hitron CODA DOCSIS 3.1 Modem",
+                                    "price": 30.00,
+                                    "description": "10x FASTER SPEEDS than DOCSIS 3.0. This DOCSIS 3.1 Cable Modem is best for Cable Internet Speeds Plans up to 1 Gbps. Note: 2nd IP Address is required from your Cable Internet Service Provider to use both Ethernet ports simultaneously",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61cWukfBQmL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 17,
+                                    "title": "Video Camera Camcorder",
+                                    "price": 55.00,
+                                    "description": "The video camera is useful to take the beautiful photos and share it in your Youtube. It can be used as webcam when the camera connect the computer.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/71C6TFutbeL._AC_SX466_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 18,
+                                    "title": "TOZO O2 True Open Ear Wireless Headphones",
+                                    "price": 45.00,
+                                    "description": "The TOZO OpenBuds feature a unique dual-axis design that allows for both horizontal and vertical adjustment, providing multiple angles for a customized fit to accommodate different ear shapes and sizes",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61kUkskjuiL._AC_SX466_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                }
+                                ,
+                                {
+                                    "id": 19,
+                                    "title": "Tribit Bluetooth Speaker",
+                                    "price": 28.00,
+                                    "description": "With crystal highs, crisp mids and rich bass, XSound Go creates an immersive listening experience unlike any other. State of the art bass radiators and dual 8W power drivers deliver shocking sound without distortion even at maximum volume.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/71BJbii7jlL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                }
+                                ,
+                                {
+                                    "id": 20,
+                                    "title": "Statik PowerPivot 12W USB to USB C Cable",
+                                    "price": 20.00,
+                                    "description": "3 pack Rotating USB A to C Cable Head: Enjoy all the advantages of the Statik 360 USB to USBC cable without magnetic tips.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/81MZa0bx2iL._SX522_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                }
+                                ,
+                                {
+                                    "id": 21,
+                                    "title": "Wireless Keyboard and Mouse Combo",
+                                    "price": 25.00,
+                                    "description": "A delightful blend of vintage style and modern technology, this retro typewriter-inspired keyboard is a fashionable product perfect for trendsetters. Brighten up your day with a touch of nostalgia!.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61nDuUlf3EL._AC_SX466_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 22,
+                                    "title": "Outlet Concealer Power Strip-Outlet Cover Extender",
+                                    "price": 21.00,
+                                    "description": "Effortlessly hide power strips and cords with our sleek outlet cover extension cord.Combine power strip and baby proofing features, seamlessly blend functionality with style in your bedrooms and living rooms.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61yIojLBBKL._AC_SX679_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 23,
+                                    "title": "Kensington Monitor Stand Extra Wide",
+                                    "price": 19.00,
+                                    "description": "By setting your monitor at the proper height that’s in line with your eyes, you can lower the chances you will suffer from aches and pain after spending Long hours on the computer",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61Il3Vlqj3L._AC_SX466_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 24,
+                                    "title": "SmartDelux Powered USB Hub",
+                                    "price": 23.99,
+                                    "description": "With the black USB Hub task to charge mobile devices and at the same time to keep a lot of external equipment connected became reality",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/815F1EZO0lL._AC_SX466_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 25,
+                                    "title": "TRENDnet Ethernet Over Coax Adapter",
+                                    "price": 25.00,
+                                    "description": " 1 x MoCA Coax: F-Type Female coax input, 1 x TV Coax: F-Type Female coax output, 1 x RJ-45 Gigabit LAN port. Comes with 1 x TMO-311C MoCA Adapter",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/81nQtEbZ+OL._AC_SX466_.jpg",
+                                    "rating": {
+                                        "rate": 4.3,
+                                        "count": 2500
+                                    },
+                                    "color": "triple black",
+                                    "size": "one size",
+                                    "quantity": 1,
+                                    "brand": "bose"
+                                },
+                                {
+                                    "id": 26,
+                                    "title": "WiFi Extender Signal Booster",
+                                    "price": 33.00,
+                                    "description": "Say Goodbye to WiFi Dead Zones: Our wifi booster externder is equipped with 4 high-performance external antennas, covering up to 10000 sq.ft with higher penetration and no signal loss through walls. From bedrooms, bathrooms, garages, basements to gardens, just enjoy the WiFi signal as you want.",
+                                    "category": "electronics",
+                                    "image": "https://m.media-amazon.com/images/I/61GuJ3rOqvL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
                                     "rating": {
                                         "rate": 4.3,
                                         "count": 2500
